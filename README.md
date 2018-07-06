@@ -173,7 +173,7 @@ For Continuous value prediction
 > - **coef_** : y = wx +b, w = coef_
 > - **intercept_** : y = wx +b, b = intercept_
 
-
+1. basic
 ```python
 from sklearn.linear_model import LinearRegression
 
@@ -181,6 +181,38 @@ linear_reg_model = LinearRegression()
 linear_reg_model.fit(X_train, y_train)
 r2_score = linear_reg_model.score(X_test, y_test)
 print(r2_score)
+```
+2. plot single feature scatter & regression line
+```python
+def plot_on_test(feat, coef, intercept, X_test, y_test):
+    plt.scatter(X_test, y_test)
+    plt.plot(X_test, coef*X_test+intercept, c='r')
+    plt.title('Linear regression line of feature [ {} ] on test set'.format(feat))
+    plt.show()
+    
+def plot_on_train(feat, coef, intercept, X_train, y_train):
+    plt.scatter(X_train, y_train)
+    plt.plot(X_train, coef*X_train+intercept, c='r')
+    plt.title('Linear regression line of feature [ {} ] on train set'.format(feat))
+    plt.show()  
+    
+  
+for feat in FEAT_COLS:
+    X = house_df[feat].values.reshape(-1,1)
+    y = house_df['price'].values
+    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=1/3,random_state=10)
+    lr_model = LinearRegression()
+    lr_model.fit(X_train,y_train)
+    r2 = lr_model.score(X_test,y_test)
+    print(feat, ' -> r2 = ', r2)
+    coef = lr_model.coef_
+    intercept = lr_model.intercept_
+    plot_on_test(feat, coef, intercept, X_test, y_test)
+    plot_on_train(feat, coef, intercept, X_train, y_train)
+    print('y = {}x + {}'.format(coef, intercept))
+
+    print('-=*=-'*15)
+    print()
 ```
 
 ### 3.1.3 Logistic Regression
