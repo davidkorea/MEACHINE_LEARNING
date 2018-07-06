@@ -155,7 +155,21 @@ for k in k_list:
 ```
 
 ### 3.1.2 Linear Regression
+For Continuous value prediction
 
+> **LinearRegression()**
+> - **coef_** : y = wx +b, w = coef_
+> - **intercept_** : y = wx +b, b = intercept_
+
+
+```python
+from sklearn.linear_model import LinearRegression
+
+linear_reg_model = LinearRegression()
+linear_reg_model.fit(X_train, y_train)
+r2_score = linear_reg_model.score(X_test, y_test)
+print(r2_score)
+```
 
 ### 3.1.3 Logistic Regression
 
