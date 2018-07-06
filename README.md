@@ -69,7 +69,7 @@ data_df['quality'].apply(level)
 ```
 
 ```python
-data_df['level'] = pd.cut(data_df['Happiness Score'], bins=[-np.inf,3,5,np.inf], labels=['Low','Middle','High'])
+data_df['level'] = pd.cut(data_df['HappScore'], bins=[-np.inf,3,5,np.inf], labels=['Low','Middle','High'])
 ```
 5.
 ```python
@@ -84,6 +84,25 @@ all_df = pd.concat([train_df,test_df],axis=0,ignore_index=True)
 - pd.merge, left+right
 ```python
 all_df = pd.merge(device_df, usage_df, on='user_id', how='inner')
+```
+7.
+- ex:2010-06-28
+```python
+train_df['date_account_created'] = pd.to_datetime(train_df.date_account_created)
+```
+- ex:20090319043255
+```python
+tr_tfa_str = train_df['timestamp_first_active'].values.astype('str')
+train_df['timestamp_first_active'] = pd.to_datetime(tr_tfa_str)
+```
+-
+```python
+df['tfa_year'] = np.array([x.year for x in df.timestamp_first_active])
+```
+-
+```python
+df['tfa_wd'] = np.array([x.isoweekday() for x in df.timestamp_first_active])
+# return weekdays as 1,2,3,4,5,6,7 = mon ~ sun
 ```
 
 # 3. Modeling
