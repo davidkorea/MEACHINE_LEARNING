@@ -87,6 +87,7 @@ data_df['level'] = pd.cut(data_df['HappScore'], bins=[-np.inf,3,5,np.inf], label
 ```python
 train_df['Sex'] = train_df['Sex'].map({'male':1,'female':0}) #replace original values by 0, 1
 ```
+> For age, price data etc., get values distribution by data_df.describe(), then group it by Quartile(min,25%,50%,75%,max,mean)
 
 5.
 ```python
