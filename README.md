@@ -72,9 +72,18 @@ data_df['quality'].apply(level)
 data_df['level'] = pd.cut(data_df['Happiness Score'], bins=[-np.inf,3,5,np.inf], labels=['Low','Middle','High'])
 ```
 5.
-
-
-
-
+```python
+all_df['platform_version'] = all_df['platform_version'].astype('str')
+all_df['system'] = all_df['platform'].str.cat(all_df['platform_version'], sep='_')
+```
+6. 
+- pd.concat, axis=0 => up+down, axis=1 => left+right
+```python
+all_df = pd.concat([train_df,test_df],axis=0,ignore_index=True)
+```
+- pd.merge, left+right
+```python
+all_df = pd.merge(device_df, usage_df, on='user_id', how='inner')
+```
 
 # 3. Modeling
