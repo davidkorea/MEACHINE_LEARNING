@@ -42,18 +42,23 @@ plt.scatter(x=data_df['SepalLengthCm'], y=data_df['SepalWidthCm'], c='r')
 # 2. Feature Engineering
 
 1.
+```python
 data_df.dropna(inplace=True)
-
+```
 2.
+```python
 data_df['length'].fillna(0, inplace=True)
-
+```
 3.
+```python
 data_df.drop(['length','width'], axis=1, inplace=True)
-
+```
 4.
+```python
 data_df['quality'].apply(lambda x:0 if x<6 else 1)
+```
 
-
+```python
 def level(x): # x is the each value of column 'quality'
   if x<6:
     labal=0
@@ -61,9 +66,14 @@ def level(x): # x is the each value of column 'quality'
     label=1
   return label
 data_df['quality'].apply(level)
+```
+
+```python
+data_df['level'] = pd.cut(data_df['Happiness Score'], bins=[-np.inf,3,5,np.inf], labels=['Low','Middle','High'])
+```
+5.
 
 
-data_df['level'] = pd.cut(x=data_df['quality'], bins=[-np.inf,3,5,np.inf], labels=['a','b','c','d'])
 
 
 
