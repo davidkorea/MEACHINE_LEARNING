@@ -83,6 +83,11 @@ data_df['quality'].apply(level)
 ```python
 data_df['level'] = pd.cut(data_df['HappScore'], bins=[-np.inf,3,5,np.inf], labels=['Low','Middle','High'])
 ```
+
+```python
+train_df['Sex'] = train_df['Sex'].map({'male':1,'female':0}) #replace original values by 0, 1
+```
+
 5.
 ```python
 all_df['platform_version'] = all_df['platform_version'].astype('str')
