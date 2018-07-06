@@ -136,6 +136,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, rando
 ### 3.1.1 KNN
 The nearest n neighbors, test sample's label = the majority labels of these n neighbors.
 
+> **KNeighborsClassifier(n_neighbors=, p=)**
+> - **n_neighbors** : int, optional (default = 5), Number of neighbors to use  
+> - **p** : integer, optional (default = 2),
+    Power parameter for the Minkowski metric. When p = 1, this is
+    equivalent to using manhattan_distance (l1), and euclidean_distance
+    (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 
