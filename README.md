@@ -120,7 +120,24 @@ scaled_arr = scaler.fit_transform(data_df[FEAT_COLS])
 scaled_df = pd.DataFrame(scaled_arr,columns=FEAT_COLS)
 ```
 
-
-
-
 # 3. Modeling
+## 3.1 Supervised Learning
+### 3.1.1 KNN
+
+
+### 3.1.2 Linear Regression
+
+
+### 3.1.3 Logistic Regression
+
+
+### 3.1.4 SVM
+
+
+### 3.1.5 Neural Network = MLP
+
+
+### 3.1.6 Decision Tree
+
+
+## 3.2 Unsupervised Learning
