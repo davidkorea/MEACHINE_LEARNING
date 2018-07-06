@@ -121,9 +121,31 @@ scaled_df = pd.DataFrame(scaled_arr,columns=FEAT_COLS)
 ```
 
 # 3. Modeling
+
+```python
+from sklearn.model_selection import train_test_split
+
+X = data_df[FEAT_COLS].values
+y = data_df['label'].values
+# values不加也可以模型训练，算出score，但后面的X_test[idx, :]不可以进行slicing
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 10)
+```
+
 ## 3.1 Supervised Learning
 ### 3.1.1 KNN
+The nearest n neighbors, test sample's label = the majority labels of these n neighbors.
 
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+k_list = [3,5,7]
+for k in k_list:
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(X_train, y_train)
+    acc = knn.score(X_test, y_test)
+    print('k=', k , '-> Accuracy: ' ,acc)
+```
 
 ### 3.1.2 Linear Regression
 
@@ -134,7 +156,7 @@ scaled_df = pd.DataFrame(scaled_arr,columns=FEAT_COLS)
 ### 3.1.4 SVM
 
 
-### 3.1.5 Neural Network = MLP
+### 3.1.5 Neural Network - MLP
 
 
 ### 3.1.6 Decision Tree
