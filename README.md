@@ -37,7 +37,19 @@ FEAT_COLS = data_df.columns.tolist()[:-1]
 ```python
 plt.scatter(x=data_df['SepalLengthCm'], y=data_df['SepalWidthCm'], c='r')
 ```
-
+8. 
+```python
+corr = data_df[FEAT_COLS].corr()
+plt.figure(figsize=(16,9))
+sns.heatmap(data=corr, annot=True, cmap='coolwarm')
+```
+9.
+```python
+pd.scatter_matrix(data_df[FEAT_COLS],
+                 diagonal='kde', # default=hist,
+                 figsize=(16,9),
+                 range_padding=0.1)
+```
 
 # 2. Feature Engineering
 
