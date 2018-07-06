@@ -215,6 +215,7 @@ for feat in FEAT_COLS:
     print()
 ```
 ![](https://raw.githubusercontent.com/davidkorea/MEACHINE_LEARNING/master/README/linearregressionplot.jpg)
+
 [5_house_linear_regression_visualization.ipynb](https://github.com/davidkorea/MEACHINE_LEARNING/blob/master/2_house_price/5_house_linear_regression_visualization.ipynb)
 
 ### 3.1.3 Logistic Regression
