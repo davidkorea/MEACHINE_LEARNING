@@ -105,4 +105,22 @@ df['tfa_wd'] = np.array([x.isoweekday() for x in df.timestamp_first_active])
 # return weekdays as 1,2,3,4,5,6,7 = mon ~ sun
 ```
 
+8. One-hot encoding
+```python
+encoded_df = pd.get_dummies(df['dac_wd'], prefix='dac_wd')
+df = pd.concat((df,encoded_df),axis=1)
+```
+
+9. Minmaxscaler
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+scaled_arr = scaler.fit_transform(data_df[FEAT_COLS])
+scaled_df = pd.DataFrame(scaled_arr,columns=FEAT_COLS)
+```
+
+
+
+
 # 3. Modeling
