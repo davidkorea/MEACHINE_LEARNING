@@ -129,7 +129,7 @@ df['tfa_wd'] = np.array([x.isoweekday() for x in df.timestamp_first_active])
 # return weekdays as 1,2,3,4,5,6,7 = mon ~ sun
 ```
 
-8. One-hot encoding
+8. One-hot encoding / Label encoding(each cate has one num)
 ```python
 encoded_df = pd.get_dummies(df['dac_wd'], prefix='dac_wd')
 df = pd.concat((df,encoded_df),axis=1)
