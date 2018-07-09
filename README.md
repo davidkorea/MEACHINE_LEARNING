@@ -247,6 +247,25 @@ print(acc)
 
 ### 3.1.4 SVM
 
+> **SVC(C=)**
+> - **C** : float, optional (default=1.0).
+    Penalty parameter C of the error term.误差项的惩罚参数.
+
+```python
+from sklearn.svm import SVC
+
+model_dict = {
+    'KNN':KNeighborsClassifier(n_neighbors=5),
+    'Logistic Regression':LogisticRegression(C=1e3),
+    'SVC':SVC(C=1e3)
+}
+
+for model_name, model in model_dict.items():
+    model.fit(X_train,y_train)
+    acc = model.score(X_test, y_test)
+    print(model_name, ' -> Accuracy = ',acc, '\n')
+```
+
 
 ### 3.1.5 Neural Network - MLP
 
