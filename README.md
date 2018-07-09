@@ -4,6 +4,12 @@
 2. Feature Engineering
 3. Modeling
 
+    3.1 Models & Params
+    
+    3.2 Regularization & Cross validation
+    
+    3.3 Ensemble learning
+
 # 1. Exploration Data Analysis (EDA)
 
 1. 
