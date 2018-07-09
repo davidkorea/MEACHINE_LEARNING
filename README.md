@@ -232,6 +232,18 @@ For classifying use. Comes from LinearREgression, and nonlinearize y = wx+b to `
     Inverse of regularization strength; must be a positive float. 
     Like in support vector machines, smaller values specify stronger regularization.
 
+```python
+from sklearn.linear_model import LogisticRegression
+
+linear_reg_model = LogisticRegression()
+linear_reg_model.fit(X_train, y_train)
+acc = linear_reg_model.score(X_test, y_test)
+print(acc)
+```
+[Iris_classifier_logistic_svc](https://github.com/davidkorea/Iris_classifier_logistic_svc)
+
+[6_iris_logistic_svc_complexity](https://github.com/davidkorea/MEACHINE_LEARNING/blob/master/1_iris/6_iris_logistic_svc_complexity.ipynb)
+
 
 ### 3.1.4 SVM
 
