@@ -6,6 +6,10 @@
 
     3.1 Models & Params
     
+        3.1.1 Supervised Learning
+        
+        3.1.2 Unsupervised Learning
+    
     3.2 Regularization & Cross validation
     
     3.3 Ensemble learning
