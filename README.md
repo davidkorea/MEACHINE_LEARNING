@@ -254,7 +254,6 @@ print(acc)
 
 [6_iris_logistic_svc_complexity](https://github.com/davidkorea/MEACHINE_LEARNING/blob/master/1_iris/6_iris_logistic_svc_complexity.ipynb)
 
-
 ### 3.1.4 SVM
 
 > **SVC(C=)**
@@ -275,7 +274,6 @@ for model_name, model in model_dict.items():
     acc = model.score(X_test, y_test)
     print(model_name, ' -> Accuracy = ',acc, '\n')
 ```
-
 
 ### 3.1.5 Neural Network - MLP
 
