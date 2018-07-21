@@ -276,6 +276,7 @@ for model_name, model in model_dict.items():
 ```
 
 ### 3.1.5 Neural Network - MLP
+어려워ㅠㅠ
 
 ### 3.1.6 Decision Tree
 
