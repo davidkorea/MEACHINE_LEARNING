@@ -186,7 +186,7 @@ for k in k_list:
 For Continuous value prediction
 
 > **LinearRegression()**
-> - **coef_** : y = wx +b, w = coef_
+> - **coef_** : coef_ is of shape (1, n_features), y = wx +b, w = coef_
 > - **intercept_** : y = wx +b, b = intercept_
 
 1. basic
@@ -212,7 +212,7 @@ def plot_on_train(feat, coef, intercept, X_train, y_train):
     plt.title('Linear regression line of feature [ {} ] on train set'.format(feat))
     plt.show()  
     
-  
+# coef_ is of shape (1, n_features), that's why fit by each feature to get the only one coef to plot  
 for feat in FEAT_COLS:
     X = house_df[feat].values.reshape(-1,1)
     y = house_df['price'].values
