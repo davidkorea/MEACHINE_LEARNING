@@ -106,10 +106,12 @@ all_df['system'] = all_df['platform'].str.cat(all_df['platform_version'], sep='_
 ```
 6. 
 - pd.concat, axis=0 => up+down, axis=1 => left+right
+- do not need foreigner_key to link up together
 ```python
 all_df = pd.concat([train_df,test_df],axis=0,ignore_index=True)
 ```
 - pd.merge, left+right
+- like sql link up together
 ```python
 all_df = pd.merge(device_df, usage_df, on='user_id', how='inner')
 ```
