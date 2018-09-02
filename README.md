@@ -161,6 +161,7 @@ y = data_df['label'].values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 10)
 ```
+> Issue: [What does the value of random_state mean? #2](https://github.com/davidkorea/MEACHINE_LEARNING/issues/2)
 
 ## 3.1 Supervised Learning
 ### 3.1.1 KNN
