@@ -1,6 +1,6 @@
 # Douban Movie NLP
 
-# Issue 2 - re.compile, sub()
+# Issue 2 - re.compile(), re.sub()
 
 1. ```re.compile(pattern[, flags])```, compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match(), search(), sub()函数使用
 
