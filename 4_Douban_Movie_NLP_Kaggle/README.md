@@ -13,12 +13,12 @@
         - re.U 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库
         - re.X 为了增加可读性，忽略空格和' # '后面的注释
     - Ex: ```pattern = re.compile(r'([a-z]+) ([a-z]+)', re.I)   # re.I 表示忽略大小写```
-2. ```re.sub(pattern, repl, string, count=0)```, re.sub用于替换字符串中的匹配项。
+2. ```re.sub(pattern, repl, string, count=0)```, re.sub用于替换字符串中的匹配项。**替换 string中符合pattern规则的字符 为repl**
     - pattern : 正则中的模式字符串。
     - repl : 替换的字符串，也可为一个函数。
     - string : 要被查找替换的原始字符串。
     - count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。\
-    > 替换 string中符合pattern规则的字符 为repl
+   
 
 
 # Issue 1 - Pandas apply() args parameter
