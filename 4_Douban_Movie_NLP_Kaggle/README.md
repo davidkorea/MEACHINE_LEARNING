@@ -17,8 +17,22 @@
     - pattern : 正则中的模式字符串。
     - repl : 替换的字符串，也可为一个函数。
     - string : 要被查找替换的原始字符串。
-    - count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。\
-   
+    - count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。
+    - Ex: 
+        ```python
+        phone = "2004-959-559 # 这是一个电话号码"
+        num = re.sub(r'\D', "", phone)  # 移除非数字的内容, 替换满足规则的字符为空
+        print ("电话号码 : ", num)        
+        ->out:
+        电话号码 :  2004959559
+        ```
+    
+3. Ex
+```python
+filter_pattern = re.compile('[^\u4E00-\u9FD5]+')
+chinese_only = filter_pattern.sub('', raw_text)
+
+```
 
 
 # Issue 1 - Pandas apply() args parameter
