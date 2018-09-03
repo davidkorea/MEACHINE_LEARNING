@@ -13,6 +13,7 @@
         - re.U 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库
         - re.X 为了增加可读性，忽略空格和' # '后面的注释
     - Ex: ```pattern = re.compile(r'([a-z]+) ([a-z]+)', re.I)   # re.I 表示忽略大小写```
+    
 2. ```re.sub(pattern, repl, string, count=0)```, **替换 string中符合pattern规则的字符 为repl**， re.sub用于替换字符串中的匹配项
     - pattern : 正则中的模式字符串。
     - repl : 替换的字符串，也可为一个函数。
@@ -31,9 +32,8 @@
 ```python
 filter_pattern = re.compile('[^\u4E00-\u9FD5]+')
 chinese_only = filter_pattern.sub('', raw_text)
-
 ```
-
+将raw_text中，符合filter_pattern的字符替换为''空，仅保留中文字符
 
 # Issue 1 - Pandas apply() args parameter
 **pandas: apply a function with arguments to a series**
