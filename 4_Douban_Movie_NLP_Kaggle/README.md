@@ -13,6 +13,7 @@
         - re.U 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库
         - re.X 为了增加可读性，忽略空格和' # '后面的注释
     - Ex: ```pattern = re.compile(r'([a-z]+) ([a-z]+)', re.I)   # re.I 表示忽略大小写```
+2. ```re.sub(pattern, repl, string, count=0)```
 
 
 
