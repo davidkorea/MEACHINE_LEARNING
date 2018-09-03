@@ -28,12 +28,13 @@
         电话号码:2004959559
         ```
     
-3. Ex
+3. Ex: 将raw_text中，符合filter_pattern规则的字符替换为''空，仅保留中文字符
 ```python
 filter_pattern = re.compile('[^\u4E00-\u9FD5]+')
 chinese_only = filter_pattern.sub('', raw_text)
 ```
-将raw_text中，符合filter_pattern的字符替换为''空，仅保留中文字符
+
+Reference: [Python3 正则表达式](http://www.runoob.com/python3/python3-reg-expressions.html)
 
 # Issue 1 - Pandas apply() args parameter
 **pandas: apply a function with arguments to a series**
