@@ -2,9 +2,34 @@
 
 # Issue 5 - word2vector
 
-### 1. Bag of words (BoW)
+#### 0. Preparation
+1. raw text
+    ```python
+    text = """
+           稀疏矩阵是由大部分为零的矩阵组成的矩阵，
+           这是和稠密矩阵有所区别的主要特点。
+           """
+    # must wrap row by enter \n, or else cannot split
+    ```
+2. split text to list
+    ```python
+    sentence_list = text.split()
+    ```
+3. jieba cut
+    ```python
+    corpus_list = [jieba.lcut(i) for i in sentence_list]
+    document = [' '.join(i) for i in corpus_list]
+    document
+    ```
+    ```
+    ['稀疏 矩阵 是 由 大部分 为 零 的 矩阵 组成 的 矩阵 ，', '这 是 和 稠密 矩阵 有所区别 的 主要 特点 。']
+    ```
+
+
+## 1. Bag of words (BoW)
 
 **```from sklearn.feature_extraction.text import CountVectorizer```**
+
 1. ```countvector = CountVectorizer()```
 2. ```model_fit = countvector.fit(document)```
     - ```print(model_fit)```
@@ -48,7 +73,7 @@
       ```
 
 
-### 2. TF-IDF
+## 2. TF-IDF
 
 **```from sklearn.feature_extraction.text import TfidfTransformer ```**
 1. **```tfidf = TfidfVectorizer()```**
