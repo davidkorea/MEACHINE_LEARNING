@@ -1,6 +1,6 @@
 # Douban Movie NLP
 
-# Issue 5 - word2vector
+# Issue 5 - Word2vector
 
 ## 0. Preparation
 1. raw text
@@ -27,7 +27,7 @@
     ```
 
 
-## 1. Bag of words (BoW)
+## 1. Bag of words (BoW), word to vector by word frequency
 
 **```from sklearn.feature_extraction.text import CountVectorizer```**
 
@@ -97,7 +97,7 @@
     ```
 
 
-## 2. TF-IDF
+## 2. Word to vector by TF-IDF
 
 **```from sklearn.feature_extraction.text import TfidfTransformer ```**
 1. **```tfidf = TfidfVectorizer()```**
@@ -132,7 +132,15 @@
       [[0.        , 0.36378803, 0.        , 0.        , 0.77651453, 0.36378803, 0.        , 0.36378803],
        [0.47107781, 0.        , 0.47107781, 0.47107781, 0.33517574, 0.        , 0.47107781, 0.        ]])
       ```
-          
+
+Reference:
+
+1. [sklearn: TfidfVectorizer 中文处理及一些使用参数](https://blog.csdn.net/blmoistawinde/article/details/80816179)
+2. [文本数据预处理：sklearn 中 CountVectorizer、TfidfTransformer 和 TfidfVectorizer](https://blog.csdn.net/m0_37324740/article/details/79411651)
+3. [机器学习稀疏矩阵简介(附Python代码)](https://yq.aliyun.com/articles/569724)
+
+
+
 # Issue 4 - Pandas sample
 
 - **```sample(n=None, frac=None, random_state=None)```**
