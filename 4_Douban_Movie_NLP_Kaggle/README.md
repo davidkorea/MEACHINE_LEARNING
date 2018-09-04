@@ -2,7 +2,7 @@
 
 # Issue 5 - word2vector
 
-#### 0. Preparation
+## 0. Preparation
 1. raw text
     ```python
     text = """
@@ -55,7 +55,7 @@
       ('矩阵', 4), ('稀疏', 5), ('稠密', 6), ('组成', 7)]
       ```
 3. ```model_transform = model_fit.transform(document)```
-    - ```print(model_transform)```
+    - ```print(model_transform)```, sparse matrix 稀疏矩阵， ```（row_inx, column_idx）value```
       ```
       (0, 1)	1
       (0, 4)	3
@@ -67,7 +67,7 @@
       (1, 4)	1
       (1, 6)	1
       ```
-    - ```model_transform.toarray()```
+    - ```model_transform.toarray()```, dense matrix 密集矩阵
       ```
       array([[0, 1, 0, 0, 3, 1, 0, 1],
              [1, 0, 1, 1, 1, 0, 1, 0]])
