@@ -51,9 +51,38 @@
 ### 2. TF-IDF
 
 **```from sklearn.feature_extraction.text import TfidfTransformer ```**
-
-
-
+1. **```tfidf = TfidfVectorizer()```**
+2. **```model_fit = tfidf.fit(document)```**
+    - ```print(model_fit.vocabulary_)``
+      ```
+      {'稀疏': 5, '矩阵': 4, '大部分': 1, '组成': 7, '稠密': 6, '有所区别': 2, '主要': 0, '特点': 3}
+      ```
+    - sort a dict
+      ```python
+      sort_dict = sorted([i for i in model_fit.vocabulary_.items()], key=lambda x:x[1], reverse=False)
+      ```
+      ```
+      [('主要', 0), ('大部分', 1), ('有所区别', 2), ('特点', 3), ('矩阵', 4), ('稀疏', 5), ('稠密', 6), ('组成', 7)]
+      ```
+3. **```model_transform = model_fit.transform(document)```**
+    - ```print(model_transform)```
+      ```
+      (0, 7)	0.3637880261736418
+      (0, 5)	0.3637880261736418
+      (0, 4)	0.7765145304745155
+      (0, 1)	0.3637880261736418
+      (1, 6)	0.47107781233161794
+      (1, 4)	0.33517574332792605
+      (1, 3)	0.47107781233161794
+      (1, 2)	0.47107781233161794
+      (1, 0)	0.47107781233161794
+      ```
+    - ```model_transform.toarray()```
+      ```
+      array(
+      [[0.        , 0.36378803, 0.        , 0.        , 0.77651453, 0.36378803, 0.        , 0.36378803],
+       [0.47107781, 0.        , 0.47107781, 0.47107781, 0.33517574, 0.        , 0.47107781, 0.        ]])
+      ```
           
 # Issue 4 - Pandas sample
 
