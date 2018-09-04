@@ -51,8 +51,7 @@
       sort_dict_list = sort( [i for i in model_fit.vocabulary_.items()], key=lambda x:x[1], reverse=False )
       ```
       ```
-      [('主要', 0), ('大部分', 1), ('有所区别', 2), ('特点', 3), 
-      ('矩阵', 4), ('稀疏', 5), ('稠密', 6), ('组成', 7)]
+      [('主要', 0),('大部分', 1),('有所区别', 2),('特点', 3),('矩阵', 4),('稀疏', 5),('稠密', 6),('组成', 7)]
       ```
 3. ```model_transform = model_fit.transform(document)```
     - ```print(model_transform)```, sparse matrix稀疏矩阵，```(row_inx, column_idx) value```
@@ -72,6 +71,26 @@
       array([[0, 1, 0, 0, 3, 1, 0, 1],
              [1, 0, 1, 1, 1, 0, 1, 0]])
       ```
+4. All in one
+    ```python
+    model = CountVectorizer()
+    result = model.fit_tranform(document)
+    print(result)   
+    print(result.get_feature_names())
+    ```
+    ```
+      (0, 7)	1
+      (0, 1)	1
+      (0, 4)	3
+      (0, 5)	1
+      (1, 3)	1
+      (1, 0)	1
+      (1, 2)	1
+      (1, 6)	1
+      (1, 4)	1
+  
+    ['主要', '大部分', '有所区别', '特点', '矩阵', '稀疏', '稠密', '组成']
+    ```
 
 
 ## 2. TF-IDF
@@ -79,7 +98,7 @@
 **```from sklearn.feature_extraction.text import TfidfTransformer ```**
 1. **```tfidf = TfidfVectorizer()```**
 2. **```model_fit = tfidf.fit(document)```**
-    - ```print(model_fit.vocabulary_)``
+    - ```print(model_fit.vocabulary_)```
       ```
       {'稀疏': 5, '矩阵': 4, '大部分': 1, '组成': 7, '稠密': 6, '有所区别': 2, '主要': 0, '特点': 3}
       ```
@@ -88,7 +107,7 @@
       sort_dict = sorted([i for i in model_fit.vocabulary_.items()], key=lambda x:x[1], reverse=False)
       ```
       ```
-      [('主要', 0), ('大部分', 1), ('有所区别', 2), ('特点', 3), ('矩阵', 4), ('稀疏', 5), ('稠密', 6), ('组成', 7)]
+      [('主要', 0),('大部分', 1),('有所区别', 2),('特点', 3),('矩阵', 4),('稀疏', 5),('稠密', 6),('组成', 7)]
       ```
 3. **```model_transform = model_fit.transform(document)```**
     - ```print(model_transform)```
