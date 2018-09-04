@@ -66,7 +66,7 @@
       (1, 4)	1
       (1, 6)	1
       ```
-    - ```model_transform.toarray()```, dense matrix稠密矩阵
+    - ```model_transform.toarray()```, dense matrix稠密矩阵, sorted_dict순서에 따라 vector를 생성하고, 해당 위치에 단어 frequency를 채우고
       ```
       array([[0, 1, 0, 0, 3, 1, 0, 1],
              [1, 0, 1, 1, 1, 0, 1, 0]])
