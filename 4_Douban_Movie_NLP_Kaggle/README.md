@@ -20,6 +20,14 @@
       ``` 
       {'一条': 1, '天狗': 4, '日来': 5, '一切': 0, '星球': 6, '全宇宙': 3, '便是': 2}        
       ```
+    - sort a dict
+      ```python
+      sort_dict_list = sort( [item for item in model_fit.vocabulary_.items()], key=lambda x:x[1], reverse=False )
+      ```
+      ```
+      [('一切', 0), ('一条', 1), ('便是', 2), ('全宇宙', 3), ('天狗', 4), ('日来', 5), ('星球', 6)]
+      ```
+    
 
 
 ### 2. TF-IDF
