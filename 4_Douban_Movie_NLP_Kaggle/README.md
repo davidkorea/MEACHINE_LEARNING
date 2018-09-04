@@ -82,7 +82,7 @@ dtype: float64
 
 # Issue 2 - re.compile(), re.sub()
 
-1. ```re.compile(pattern[, flags])```, compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match(), search(), sub()函数使用
+1. **```re.compile(pattern[, flags])```**, compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match(), search(), sub()函数使用
 
     - pattern : 一个字符串形式的正则表达式
     - flags 可选，表示匹配模式，比如忽略大小写，多行模式等，具体参数为：
@@ -94,7 +94,7 @@ dtype: float64
         - re.X 为了增加可读性，忽略空格和' # '后面的注释
     - Ex: ```pattern = re.compile(r'([a-z]+) ([a-z]+)', re.I)   # re.I 表示忽略大小写```
     
-2. ```re.sub(pattern, repl, string, count=0)```, **替换 string中符合pattern规则的字符 为repl**， re.sub用于替换字符串中的匹配项
+2. **```re.sub(pattern, repl, string, count=0)```**, **替换 string中符合pattern规则的字符 为repl**， re.sub用于替换字符串中的匹配项
     - pattern : 正则中的模式字符串。
     - repl : 替换的字符串，也可为一个函数。
     - string : 要被查找替换的原始字符串。
