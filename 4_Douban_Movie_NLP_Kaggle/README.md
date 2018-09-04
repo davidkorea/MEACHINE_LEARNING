@@ -7,7 +7,7 @@
 **```from sklearn.feature_extraction.text import CountVectorizer```**
 1. ```countvector = CountVectorizer()```
 2. ```model_fit = countvector.fit(document)```
-    - print(model_fit)
+    - ```print(model_fit)```
       ``` 
       CountVectorizer(analyzer='word', binary=False, decode_error='strict',
       dtype=<class 'numpy.int64'>, encoding='utf-8', input='content',
@@ -16,7 +16,7 @@
       strip_accents=None, token_pattern='(?u)\\b\\w\\w+\\b',
       tokenizer=None, vocabulary=None)
       ```
-    - print(model_fit.vocabulary_)
+    - ```print(model_fit.vocabulary_)```
       ``` 
       {'一条': 1, '天狗': 4, '日来': 5, '一切': 0, '星球': 6, '全宇宙': 3, '便是': 2}        
       ```
@@ -27,7 +27,26 @@
       ```
       [('一切', 0), ('一条', 1), ('便是', 2), ('全宇宙', 3), ('天狗', 4), ('日来', 5), ('星球', 6)]
       ```
-    
+3. ```model_transform = model_fit.transform(document)```
+    - ```print(model_transform)```
+      ```
+      (0, 1)	1
+      (0, 4)	1
+      (2, 5)	1
+      (3, 0)	1
+      (3, 6)	1
+      (4, 3)	1
+      (5, 2)	1
+      ```
+    - ```model_transform.toarray()```
+      ```
+      array([[0, 1, 0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 1, 0],
+       [1, 0, 0, 0, 0, 0, 1],
+       [0, 0, 0, 1, 0, 0, 0],
+       [0, 0, 1, 0, 0, 0, 0]])
+      ```
 
 
 ### 2. TF-IDF
