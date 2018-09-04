@@ -1,5 +1,20 @@
 # Douban Movie NLP
 
+# Issue 5 - word2vector
+
+### 1. Bag of words (BoW)
+
+**```from sklearn.feature_extraction.text import CountVectorizer```**
+
+
+
+### 2. TF-IDF
+
+**```from sklearn.feature_extraction.text import TfidfTransformer ```**
+
+
+
+
 # Issue 4 - Pandas sample(n=None, frac=None, random_state=None)
 
 - n : int, optional, Number of items from axis to return. Cannot be used with frac. Default = 1 if frac = None.
