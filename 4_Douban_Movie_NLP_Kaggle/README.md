@@ -31,7 +31,7 @@
 
 **```from sklearn.feature_extraction.text import CountVectorizer```**
 
-1. ```countvector = CountVectorizer()```
+1. ```countvector = CountVectorizer(token_pattern=None)```
 2. ```model_fit = countvector.fit(document)```
     - ```print(model_fit)```
       ``` 
@@ -42,9 +42,9 @@
       strip_accents=None, token_pattern='(?u)\\b\\w\\w+\\b',
       tokenizer=None, vocabulary=None)
       ```
-    - ```print(model_fit.vocabulary_)```
+    - ```print(model_fit.vocabulary_)```， 여기 왜 싱클 글자 없을까? ```token_pattern='(?u)\\b\\w\\w+\\b'```regex땜에 단어 길이 둘 넘어야 인식할수있음, 그리고 이렇게 ```token_pattern=r"(?u)\b\w+\b"``` 싱클 글자 인식할수있도록 바꿀수있음.
       ``` 
-      ['主要', '大部分', '有所区别', '特点', '矩阵', '稀疏', '稠密', '组成']
+      {'稀疏': 5, '矩阵': 4, '大部分': 1, '组成': 7, '稠密': 6, '有所区别': 2, '主要': 0, '特点': 3}
       ```
     - sort a dict
       ```python
@@ -55,7 +55,7 @@
       ('矩阵', 4), ('稀疏', 5), ('稠密', 6), ('组成', 7)]
       ```
 3. ```model_transform = model_fit.transform(document)```
-    - ```print(model_transform)```, sparse matrix 稀疏矩阵， ```（row_inx, column_idx）value```
+    - ```print(model_transform)```, sparse matrix稀疏矩阵，```(row_inx, column_idx) value```
       ```
       (0, 1)	1
       (0, 4)	3
@@ -67,7 +67,7 @@
       (1, 4)	1
       (1, 6)	1
       ```
-    - ```model_transform.toarray()```, dense matrix 密集矩阵
+    - ```model_transform.toarray()```, dense matrix稠密矩阵
       ```
       array([[0, 1, 0, 0, 3, 1, 0, 1],
              [1, 0, 1, 1, 1, 0, 1, 0]])
