@@ -75,8 +75,9 @@
     ```python
     model = CountVectorizer()
     result = model.fit_tranform(document)
-    print(result)   
-    print(result.get_feature_names())
+    print(result)
+    print(result.toarray())
+    print(model.get_feature_names())
     ```
     ```
       (0, 7)	1
@@ -88,8 +89,11 @@
       (1, 2)	1
       (1, 6)	1
       (1, 4)	1
+      
+      [[0 1 0 0 3 1 0 1]
+       [1 0 1 1 1 0 1 0]]
   
-    ['主要', '大部分', '有所区别', '特点', '矩阵', '稀疏', '稠密', '组成']
+      ['主要', '大部分', '有所区别', '特点', '矩阵', '稀疏', '稠密', '组成']
     ```
 
 
