@@ -61,24 +61,24 @@ dtype: float64
 
 # Issue 3 - Pandas dropna(subset=None)
 
-- subset: 
-    - Labels along other axis to consider, e.g. if you are dropping rows these would be a list of columns to include.
+- **```dropna(subset=None)```**
+    - subset: Labels along other axis to consider, e.g. if you are dropping rows these would be a list of columns to include.
     - 删除某一行的时候，只有在subset指定的列中存在NaN时，执行删除此行
-    ```
-    >>> df = pd.DataFrame({"name": ['Alfred', 'Batman', 'Catwoman'],
-    ...                    "toy": [np.nan, 'Batmobile', 'Bullwhip'],
-    ...                    "born": [pd.NaT, pd.Timestamp("1940-04-25"), pd.NaT]})
-    >>> df
-           name        toy       born
-    0    Alfred        NaN        NaT
-    1    Batman  Batmobile 1940-04-25
-    2  Catwoman   Bullwhip        NaT
-    ```
-    ```
-    >>> df.dropna(subset=['name', 'born'])
-           name        toy       born
-    1    Batman  Batmobile 1940-04-25
-    ```
+```
+>>> df = pd.DataFrame({"name": ['Alfred', 'Batman', 'Catwoman'],
+...                    "toy": [np.nan, 'Batmobile', 'Bullwhip'],
+...                    "born": [pd.NaT, pd.Timestamp("1940-04-25"), pd.NaT]})
+>>> df
+ name        toy       born
+0    Alfred        NaN        NaT
+1    Batman  Batmobile 1940-04-25
+2  Catwoman   Bullwhip        NaT
+```
+```
+>>> df.dropna(subset=['name', 'born'])
+ name        toy       born
+1    Batman  Batmobile 1940-04-25
+```
 
 # Issue 2 - re.compile(), re.sub()
 
