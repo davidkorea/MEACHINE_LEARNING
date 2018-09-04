@@ -1,5 +1,11 @@
 # Douban Movie NLP
 
+# Issue 3 - pandas dropna(subset='')
+
+    - subset: 
+        - Labels along other axis to consider, e.g. if you are dropping rows these would be a list of columns to include.
+        - 删除某一行的时候，只有在subset指定的列中存在NaN时，执行删除此行
+
 # Issue 2 - re.compile(), re.sub()
 
 1. ```re.compile(pattern[, flags])```, compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match(), search(), sub()函数使用
