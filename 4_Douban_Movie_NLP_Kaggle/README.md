@@ -43,7 +43,7 @@ dtype: float64
 6  -0.148339  0.832938  1.787600 -1.383767
 ```
 
-# Issue 3 - Pandas dropna(subset='')
+# Issue 3 - ```Pandas dropna(subset=None)```
 
 - subset: 
     - Labels along other axis to consider, e.g. if you are dropping rows these would be a list of columns to include.
