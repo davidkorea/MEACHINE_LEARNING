@@ -8,14 +8,14 @@
 1. ```countvector = CountVectorizer()```
 2. ```model_fit = countvector.fit(document)```
     - print(model_fit)
-    ``` 
-    CountVectorizer(analyzer='word', binary=False, decode_error='strict',
-    dtype=<class 'numpy.int64'>, encoding='utf-8', input='content',
-    lowercase=True, max_df=1.0, max_features=None, min_df=1,
-    ngram_range=(1, 1), preprocessor=None, stop_words=None,
-    strip_accents=None, token_pattern='(?u)\\b\\w\\w+\\b',
-    tokenizer=None, vocabulary=None)
-    ```
+      ``` 
+      CountVectorizer(analyzer='word', binary=False, decode_error='strict',
+      dtype=<class 'numpy.int64'>, encoding='utf-8', input='content',
+      lowercase=True, max_df=1.0, max_features=None, min_df=1,
+      ngram_range=(1, 1), preprocessor=None, stop_words=None,
+      strip_accents=None, token_pattern='(?u)\\b\\w\\w+\\b',
+      tokenizer=None, vocabulary=None)
+      ```
     - print(model_fit.vocabulary_)
       ``` 
       {'一条': 1, '天狗': 4, '日来': 5, '一切': 0, '星球': 6, '全宇宙': 3, '便是': 2}        
