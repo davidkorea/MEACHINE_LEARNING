@@ -14,13 +14,14 @@
 
 
 
-
+          
 # Issue 4 - Pandas sample
 
 **```sample(n=None, frac=None, random_state=None)```**
-          - n : int, optional, Number of items from axis to return. Cannot be used with frac. Default = 1 if frac = None.
-          - frac : float, optional, Fraction of axis items to return. Cannot be used with n.
-          - random_state : int, You can use random state for reproducibility.
+
+    - n : int, optional, Number of items from axis to return. Cannot be used with frac. Default = 1 if frac = None.
+    - frac : float, optional, Fraction of axis items to return. Cannot be used with n.
+    - random_state : int, You can use random state for reproducibility.
 
 ```
 >>> s = pd.Series(np.random.randn(50))
