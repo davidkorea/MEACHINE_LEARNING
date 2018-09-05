@@ -99,7 +99,7 @@
 
 ## 2. Word to vector by TF-IDF
 
-**```from sklearn.feature_extraction.text import TfidfTransformer ```**
+**```from sklearn.feature_extraction.text import TfidfVectorizer ```**
 1. **```tfidf = TfidfVectorizer()```**
 2. **```model_fit = tfidf.fit(document)```**
     - ```print(model_fit.vocabulary_)```
