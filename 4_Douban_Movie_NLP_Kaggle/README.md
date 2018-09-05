@@ -42,7 +42,7 @@
       strip_accents=None, token_pattern='(?u)\\b\\w\\w+\\b',
       tokenizer=None, vocabulary=None)
       ```
-    - ```print(model_fit.vocabulary_)```， 여기 왜 싱클 글자 없을까? ```token_pattern='(?u)\\b\\w\\w+\\b'```regex땜에 단어 길이 둘 넘어야 인식할수있음, 그리고 이렇게 ```token_pattern=r"(?u)\b\w+\b"``` 싱클 글자 인식할수있도록 바꿀수있음.
+    - ```print(model_fit.vocabulary_)```， 여기 왜 싱클 글자 없을까? ```token_pattern='(?u)\\b\\w\\w+\\b'```regex땜에 단어 길이 둘 넘어야 인식할수있음, 그리고 이렇게 ```token_pattern=r"(?u)\\b\\w+\\b" # double \ is must``` 싱클 글자 인식할수있도록 바꿀수있음.
       ``` 
       {'稀疏': 5, '矩阵': 4, '大部分': 1, '组成': 7, '稠密': 6, '有所区别': 2, '主要': 0, '特点': 3}
       ```
