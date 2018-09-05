@@ -135,9 +135,10 @@
 
 Reference:
 
-1. [sklearn: TfidfVectorizer 中文处理及一些使用参数](https://blog.csdn.net/blmoistawinde/article/details/80816179)
-2. [文本数据预处理：sklearn 中 CountVectorizer、TfidfTransformer 和 TfidfVectorizer](https://blog.csdn.net/m0_37324740/article/details/79411651)
-3. [机器学习稀疏矩阵简介(附Python代码)](https://yq.aliyun.com/articles/569724)
+1. [Scikit-learn CountVectorizer与TfidfVectorizer](https://blog.csdn.net/the_lastest/article/details/79093407)
+2. [sklearn: TfidfVectorizer 中文处理及一些使用参数](https://blog.csdn.net/blmoistawinde/article/details/80816179)
+3. [文本数据预处理：sklearn 中 CountVectorizer、TfidfTransformer 和 TfidfVectorizer](https://blog.csdn.net/m0_37324740/article/details/79411651)
+4. [机器学习稀疏矩阵简介(附Python代码)](https://yq.aliyun.com/articles/569724)
 
 
 
