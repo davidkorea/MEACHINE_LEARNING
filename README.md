@@ -1,4 +1,4 @@
-# MEACHINE_LEARNING 
+# MEACHINE_LEARNING
 
 1. EDA
 2. Feature Engineering
