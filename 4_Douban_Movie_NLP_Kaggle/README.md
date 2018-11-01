@@ -140,7 +140,7 @@ Reference:
 3. [文本数据预处理：sklearn 中 CountVectorizer、TfidfTransformer 和 TfidfVectorizer](https://blog.csdn.net/m0_37324740/article/details/79411651)
 4. [机器学习稀疏矩阵简介(附Python代码)](https://yq.aliyun.com/articles/569724)
 
-
+Go to Issue to see details of how sklearn caculate this tfidf figure with smooth and normalization.
 
 # Issue 4 - Pandas sample
 
