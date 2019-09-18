@@ -279,7 +279,7 @@ for model_name, model in model_dict.items():
 ```
 
 ### 3.1.5 Neural Network - MLP
-어려워ㅠㅠ deep Learning， TensorFlow， pytorch，BP，gradient，RNN, backpropagation，gradient descent 
+deep Learning， TensorFlow， pytorch，BP，gradient，RNN, backpropagation，gradient descent 
 
 - gradient descent 
 对于二元，三元loss function，人可以解方程求得极值，但机器不会解方程，因此利用机器强大的计算能力进行逐步迭代。对于高维loss人也无能为力，只能依靠机器
